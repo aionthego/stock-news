@@ -16,8 +16,11 @@ Here's why sentiment analysis is so important in this context:
 
     
     Market impact: The sentiment expressed in news articles can significantly influence stock prices. Positive news often leads to an increase in stock value, while negative news can cause it to decrease.
+    
     Investment decisions: Investors and traders use sentiment analysis to gauge market sentiment and make informed investment decisions.
+    
     Risk assessment: Sentiment analysis can help identify potential risks associated with a particular stock or market sector.
+    
     Algorithmic trading: Many algorithmic trading strategies incorporate sentiment analysis to automate trading decisions based on real-time news sentiment.
 
 
