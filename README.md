@@ -6,8 +6,6 @@ Future plans include extending training to audio and video news data.
 
 This project supports a daily stock news feed in the following formats:
 
-Stock news analysis goes beyond just natural language processing (NLP); sentiment analysis is a crucial component.
-
 - Text (JSON)
 - Audio (WAV)
 - Video (MP4, AVI, MOV, MKV)
