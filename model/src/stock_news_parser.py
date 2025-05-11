@@ -1,0 +1,39 @@
+import json
+from stock_news import StockNews
+
+
+def parse_news_from_file(file_path="text/2025_05_12_stock_news.json"):
+    """
+    Reads and parses stock news from a local JSON file and creates StockNews objects.
+
+    Args:
+        file_path (str): The path to the JSON file containing news data.
+                         Defaults to "text/2025_05_12_stock_news.json".
+
+    Returns:
+        list: A list of StockNews objects or an empty list if an error occurs or file not found.
+    """
+    stock_news_list = []
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            news_data = json.load(f)
+        for ticker in news_data:
+            print(ticker)
+            for newsset in news_data[ticker]:
+                title = newsset.get('title')
+                url = newsset.get('url')
+                summary = newsset.get('summary')
+                # Create a StockNews object:
+                stock_news_item = StockNews(title, url, ticker, summary)
+                stock_news_list.append(stock_news_item)
+    except FileNotFoundError:
+        print(f"Error: File not found at {file_path}")
+    except json.JSONDecodeError:
+        print(f"Error: Could not decode JSON from {file_path}")
+    return stock_news_list
+
+if __name__ == "__main__":
+    stock_news_list = parse_news_from_file("/home/user/stock-news/model/text/stock-news-daily/2025_05_12_stock_news.json")
+    print(len(stock_news_list))
+    for sn in stock_news_list:
+        print(sn.title)
