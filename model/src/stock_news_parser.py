@@ -25,10 +25,7 @@ def parse_news_from_file(file_path="text/2025_05_12_stock_news.json"):
                 title = newsset.get('title')
                 url = newsset.get('url')
                 summary = newsset.get('summary')
-                # Create a StockNews object:
                 stock_news_item = StockNews(title, url, ticker, summary)
-                # stock_news_list.append(stock_news_item) # No longer needed if writing to file directly
-
                 # Prepare data for JSONL
                 news_data_jsonl = {
                     "title": title,
@@ -41,15 +38,10 @@ def parse_news_from_file(file_path="text/2025_05_12_stock_news.json"):
                 with open(parsed_news_file, 'a', encoding='utf-8') as outfile:
                     json.dump(news_data_jsonl, outfile)
                     outfile.write('\n')
-
     except FileNotFoundError:
         print(f"Error: File not found at {file_path}")
     except json.JSONDecodeError:
         print(f"Error: Could not decode JSON from {file_path}")
-    # return stock_news_list # No longer returning a list of objects
 
 if __name__ == "__main__":
     stock_news_list = parse_news_from_file("/home/user/stock-news/model/text/stock-news-daily/2025_05_12_stock_news.json")
-    //print(len(stock_news_list))
-    //for sn in stock_news_list:
-      //  print(sn.title)
