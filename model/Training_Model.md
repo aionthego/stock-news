@@ -1,3 +1,5 @@
+For this prototype, we 
+
 Training an AI model with stock news data involves several steps, including data preparation, model selection, training, and evaluation. Here's a general outline of the process:
 
     Data Preparation:
