@@ -1,4 +1,6 @@
-For this prototype, we 
+For this prototype, we used Google Vertex AI platform for tuning with base model gemini-2.0-flash-lite-001
+
+The stock news received in JSON format; we built stock_news_parser to collect an array of stock_news object; then that array was used to build the dataset for supervised fine tuning on Vertex AI platform.
 
 Training an AI model with stock news data involves several steps, including data preparation, model selection, training, and evaluation. Here's a general outline of the process:
 
