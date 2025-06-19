@@ -9,7 +9,7 @@ from google.genai import types
 
 def generate():
     client = genai.Client(
-        api_key=os.environ.get("AIzaSyBqKVD8uFzXuJoNraDJzwl6C67EhqAqMHU"),
+        api_key=os.environ.get(API_KEY),
     )
 
     files = [
